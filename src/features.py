@@ -62,7 +62,7 @@ def build_features(years: list[int]) -> pd.DataFrame:
 
                 circuit_key_driver = (dn, circuit_key)
                 circuit_finishes = circuit_finish_history[circuit_key_driver]
-                circuit_avg = sum(circuit_finishes) / len(circuit_finishes) if circuit_finishes else 10.0
+                circuit_avg = sum(circuit_finishes) / len(circuit_finishes) if circuit_finishes else driver_avg
 
                 champ_position = champ_position_lookup.get(dn, 20)
 
@@ -93,7 +93,5 @@ def build_features(years: list[int]) -> pd.DataFrame:
 
 if __name__ == "__main__":
     df = build_features([2023, 2024])
-    print(df.head(20).to_string())
-    print(f"\nFeature Columns: {list(df.columns)}")
-    print(f"\nTop10 Balance: {df['top10'].value_counts().to_dict()}")
+    print(df["year"].value_counts())
 
