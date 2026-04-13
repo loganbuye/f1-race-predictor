@@ -15,10 +15,10 @@ venv/
 env/
 
 # Cached API data (large files, reproducible by running fetch.py)
-data/raw/
+backend/data/raw/
 
 # Trained models (reproducible by running train.py)
-models/
+backend/models/
 
 # Jupyter
 .ipynb_checkpoints/

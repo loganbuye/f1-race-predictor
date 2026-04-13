@@ -9,7 +9,7 @@ from sklearn.metrics import (
     f1_score,
     confusion_matrix,
 )
-from src.features import build_features
+from backend.src.features import build_features
 
 MODELS_DIR = Path("models")
 MODELS_DIR.mkdir(exist_ok=True)
